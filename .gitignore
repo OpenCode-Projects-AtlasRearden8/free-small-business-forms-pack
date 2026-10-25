@@ -1,13 +1,16 @@
-# Build artifacts (pdfs under printables/ are committed on purpose)
-*.pdf.tmp
 
+# Build artifacts (pdfs under printables/ are committed on purpose)
+# Editor / OS
 # Python
-__pycache__/
+*.pdf.tmp
 *.pyc
+*.swp
+.DS_Store
+.env
+.env.*
 .pytest_cache/
 .venv/
-
-# Editor / OS
-.DS_Store
 Thumbs.db
-*.swp
+__pycache__/
+dist/*.tmp
+node_modules/
