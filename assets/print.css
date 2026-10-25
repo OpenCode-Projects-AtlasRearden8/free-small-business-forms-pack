@@ -1,0 +1,212 @@
+/* Shared print stylesheet for the Free Small-Business Forms Pack.
+   Designed for US Letter, clean black-and-white printing.
+   No branding in the printed output: fill-in forms stay unbranded. */
+
+:root {
+  --ink: #1a1a1a;
+  --rule: #6b6b6b;
+  --soft-rule: #b9b9b9;
+  --paper: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 11pt; }
+
+body {
+  margin: 0;
+  padding: 0.5in;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.35;
+}
+
+/* ---------- Page setup ---------- */
+@page {
+  size: Letter;
+  margin: 0; /* body padding handles margins so screen matches print */
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ---------- Headings ---------- */
+header.form-head {
+  border-bottom: 2.5px solid var(--ink);
+  margin-bottom: 0.35in;
+  padding-bottom: 0.12in;
+}
+
+h1 {
+  font-size: 17pt;
+  margin: 0 0 2pt 0;
+  letter-spacing: 0.02em;
+}
+
+p.tagline {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  color: var(--rule);
+  font-style: italic;
+}
+
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  margin: 0.22in 0 6pt 0;
+  padding-bottom: 2pt;
+  border-bottom: 1px solid var(--soft-rule);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+section { margin-bottom: 0.18in; }
+section:last-of-type { margin-bottom: 0; }
+
+/* ---------- Fill-in fields (type on screen, or write when printed) ---------- */
+.fill {
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11pt;
+  color: var(--ink);
+  padding: 0 4px 1px 4px;
+}
+
+.fill:focus {
+  outline: none;
+  background: #fffbe8;
+}
+
+input.fill, select.fill { width: 100%; height: 1.45em; }
+
+.inline-line {
+  display: inline-block;
+  min-width: 2.2in;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* little write-in labels */
+span.wl, label.wl {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 8pt;
+  color: var(--rule);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* two-field row used for who/when lines */
+.row { display: flex; gap: 18px; }
+.row > div { flex: 1; }
+
+/* ---------- Tables ---------- */
+table.grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+}
+
+table.grid th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: left;
+  border: 1px solid var(--rule);
+  padding: 3px 5px;
+  background: transparent;
+}
+
+table.grid td {
+  border: 1px solid var(--soft-rule);
+  padding: 2px 5px;
+  height: 22px;
+  vertical-align: top;
+}
+
+table.grid td.ckpt, table.grid th.ckpt { width: 22px; text-align: center; }
+table.grid td.money { text-align: right; width: 70px; }
+table.grid td.num { text-align: center; width: 30px; color: var(--soft-rule); }
+
+tr.tall td { height: 34px; }
+
+/* ---------- Checklists ---------- */
+ul.check { list-style: none; padding: 0; margin: 0; }
+ul.check li {
+  padding: 3px 0 3px 34px;
+  position: relative;
+  margin-bottom: 2px;
+}
+ul.check li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+}
+ul.check li small {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 8.5pt;
+  color: var(--rule);
+}
+
+/* ---------- Boxed write-in area ---------- */
+.writebox {
+  border: 1px solid var(--soft-rule);
+  min-height: 0.9in;
+  padding: 6px;
+}
+
+/* ---------- Email templates ---------- */
+.email {
+  border: 1px solid var(--soft-rule);
+  padding: 8px 10px;
+  margin: 0 0 10px 0;
+  page-break-inside: avoid;
+}
+.email p.subject {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  margin: 0 0 6px 0;
+  border-bottom: 1px dashed var(--soft-rule);
+  padding-bottom: 4px;
+}
+.email p.subject b { text-transform: uppercase; letter-spacing: 0.05em; font-size: 8pt; color: var(--rule); }
+.email p { margin: 0 0 6px 0; font-size: 10pt; }
+.email p:last-child { margin-bottom: 0; }
+.slot { color: #000; border-bottom: 1px solid var(--ink); padding: 0 2px; }
+
+/* ---------- Footer note ---------- */
+footer.form-foot {
+  margin-top: 0.3in;
+  border-top: 1px solid var(--soft-rule);
+  padding-top: 5px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 8pt;
+  color: var(--rule);
+}
+
+/* ---------- Print hints ---------- */
+@media print {
+  .no-print { display: none; }
+}
+.no-print {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+  background: #f4f0e6;
+  border: 1px solid #d8d0be;
+  padding: 8px 10px;
+  margin: 0 0 0.25in 0;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Weekly Money-Review Checklist</title>
+<meta name="description" content="A 20-minute weekly money check-in checklist. Prints to a clean PDF.">
+<link rel="stylesheet" href="../assets/print.css">
+</head>
+<body>
+
+<p class="no-print">Tip: same day, same time, every week. Coffee first, numbers second.
+See <code>guides/money-review.md</code>.</p>
+
+<header class="form-head">
+  <h1>Weekly Money Review</h1>
+  <p class="tagline">Twenty minutes on Sunday beats twenty hours at tax time.</p>
+</header>
+
+<section>
+  <div class="row">
+    <div>
+      <span class="wl">Date of review</span>
+      <input class="fill" type="text" id="reviewdate" placeholder="MM/DD/YYYY">
+    </div>
+    <div>
+      <span class="wl">Week #</span>
+      <input class="fill" type="text" id="weekno" placeholder="e.g. 12">
+    </div>
+  </div>
+</section>
+
+<h2>The check-in</h2>
+<section>
+  <ul class="check">
+    <li>Got every receipt for this week into one place
+      <small>Pile, envelope, or photos on your phone — just make them findable.</small></li>
+    <li>Logged every expense from this week (use the Expense Log sheet)
+      <small>Missing one? Water under the bridge. Log it now anyway.</small></li>
+    <li>Sent this week’s invoices
+      <small>No invoice, no income. Slow invoicing is quiet self-underpayment.</small></li>
+    <li>Noted payments that came in and marked those invoices paid
+      <small>Match each payment to an invoice number so nothing drifts.</small></li>
+    <li>Checked who owes me and nudged anything overdue
+      <small>A short, friendly reminder is a normal thing real businesses send.</small></li>
+    <li>Glanced at the bank balance and wrote it down below
+      <small>Not a goal, just a snapshot. Snapshots kill surprises.</small></li>
+    <li>Put aside a slice of income for taxes (even 10–20% helps)
+      <small>Separate account or envelope — future-you says thanks.</small></li>
+    <li>Looked ahead: anything due to me (or by me) next week?
+      <small>Deadlines, renewals, subscriptions, contract dates.</small></li>
+    <li>One number I’m watching this week is written down below
+      <small>Pick exactly one. Attention, not anxiety.</small></li>
+    <li>Next review is on my calendar (same ritual, on purpose)
+      <small>Deciding “when” now is the whole trick.</small></li>
+  </ul>
+</section>
+
+<h2>This week at a glance</h2>
+<section>
+  <table class="grid">
+    <thead>
+      <tr><th style="width:2.4in">Snapshot</th><th></th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Money in this week</td><td class="money"></td></tr>
+      <tr><td>Money out this week</td><td class="money"></td></tr>
+      <tr><td>Bank balance today</td><td class="money"></td></tr>
+      <tr><td>Invoices sent (this week)</td><td></td></tr>
+      <tr><td>Invoices paid (this week)</td><td></td></tr>
+      <tr><td>Still owed to me overall</td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <span class="wl">The one number I’m watching (and why, in one line)</span>
+  <div class="writebox" style="min-height:0.75in"></div>
+</section>
+
+<footer class="form-foot">
+  Feedback loop, not report card. Miss a week? Just do the next one.
+</footer>
+
+</body>
+</html>

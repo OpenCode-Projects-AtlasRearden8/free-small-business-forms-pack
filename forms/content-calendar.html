@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Content Calendar Grid</title>
+<meta name="description" content="One-week content planning grid. Prints to a clean PDF.">
+<link rel="stylesheet" href="../assets/print.css">
+</head>
+<body>
+
+<p class="no-print">Tip: plan the week in one 15-minute sit-down. Done beats perfect.
+See <code>guides/content-calendar.md</code>.</p>
+
+<header class="form-head">
+  <h1>Content Calendar</h1>
+  <p class="tagline">One week, all your channels, one small page. Sketch now; polish later.</p>
+</header>
+
+<section>
+  <div class="row">
+    <div>
+      <span class="wl">Week of</span>
+      <input class="fill" type="text" id="weekof" placeholder="MM/DD/YYYY">
+    </div>
+    <div>
+      <span class="wl">Theme / focus this week</span>
+      <input class="fill" type="text" id="theme">
+    </div>
+  </div>
+</section>
+
+<h2>This week’s plan</h2>
+<section>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th style="width:0.9in">Day</th>
+        <th style="width:1.15in">Channel</th>
+        <th>Idea in one line</th>
+        <th class="ckpt" style="width:40px">Done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tall"><td>Monday</td><td></td><td></td><td class="ckpt"></td></tr>
+      <tr class="tall"><td>Tuesday</td><td></td><td></td><td class="ckpt"></td></tr>
+      <tr class="tall"><td>Wednesday</td><td></td><td></td><td class="ckpt"></td></tr>
+      <tr class="tall"><td>Thursday</td><td></td><td></td><td class="ckpt"></td></tr>
+      <tr class="tall"><td>Friday</td><td></td><td></td><td class="ckpt"></td></tr>
+      <tr class="tall"><td>Saturday</td><td></td><td></td><td class="ckpt"></td></tr>
+      <tr class="tall"><td>Sunday</td><td></td><td></td><td class="ckpt"></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<h2>Idea parking lot</h2>
+<section>
+  <table class="grid">
+    <thead>
+      <tr><th style="width:0.65in">#</th><th>Nugget (half-baked is fine — park it here)</th></tr>
+    </thead>
+    <tbody>
+      <tr class="tall"><td class="num">1</td><td></td></tr>
+      <tr class="tall"><td class="num">2</td><td></td></tr>
+      <tr class="tall"><td class="num">3</td><td></td></tr>
+      <tr class="tall"><td class="num">4</td><td></td></tr>
+      <tr class="tall"><td class="num">5</td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="form-foot">
+  Miss a day? Move the idea, don’t delete it. Empty boxes are allowed.
+</footer>
+
+</body>
+</html>

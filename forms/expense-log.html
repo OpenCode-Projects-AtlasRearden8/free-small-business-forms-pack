@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Expense Log Sheet</title>
+<meta name="description" content="One-month fill-in expense log for small businesses. Prints to a clean PDF.">
+<link rel="stylesheet" href="../assets/print.css">
+</head>
+<body>
+
+<p class="no-print">Tip: log expenses the same day you make them — future-you will grin about it.
+See <code>guides/expense-log.md</code>.</p>
+
+<header class="form-head">
+  <h1>Expense Log</h1>
+  <p class="tagline">Every dollar out gets a line. Keep your receipts stacked in the same order.</p>
+</header>
+
+<section>
+  <div class="row">
+    <div>
+      <span class="wl">Month / period</span>
+      <input class="fill" type="text" id="period" placeholder="e.g. March 2026">
+    </div>
+    <div>
+      <span class="wl">Business name</span>
+      <input class="fill" type="text" id="bizname">
+    </div>
+  </div>
+</section>
+
+<h2>Expenses</h2>
+<section>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th style="width:30px">#</th>
+        <th style="width:70px">Date</th>
+        <th>What it was for</th>
+        <th style="width:110px">Category</th>
+        <th class="ckpt" style="width:34px">Rec.</th>
+        <th style="width:80px">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">1</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">2</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">3</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">4</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">5</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">6</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">7</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">8</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">9</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">10</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">11</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">12</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">13</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">14</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">15</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">16</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">17</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+      <tr><td class="num">18</td><td></td><td></td><td></td><td class="ckpt"></td><td class="money"></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="row" style="margin-top:10px;">
+  <div>
+    <span class="wl">Totals by category (add up each category here)</span>
+    <div class="writebox" style="min-height:1.05in"></div>
+  </div>
+  <div style="max-width:2.6in;">
+    <table class="grid" style="font-size:10pt;">
+      <tr><td style="border:1px solid var(--soft-rule)"><b>Total spent this period</b></td><td class="money" style="border:1px solid var(--soft-rule)"></td></tr>
+    </table>
+  </div>
+</section>
+
+<footer class="form-foot">
+  Staple or scan receipts in row order. File the finished sheet with the month’s receipts.
+</footer>
+
+</body>
+</html>

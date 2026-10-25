@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Simple Service Invoice</title>
+<meta name="description" content="Fill-in service invoice for solo and small businesses. Prints to a clean one-page PDF.">
+<link rel="stylesheet" href="../assets/print.css">
+</head>
+<body>
+
+<p class="no-print">Tip: you can type right into this page in your browser, then press Ctrl/Cmd+P and choose
+“Save as PDF.” Or print it blank and handwrite it. See <code>guides/invoice.md</code>.</p>
+
+<header class="form-head">
+  <h1>Service Invoice</h1>
+  <p class="tagline">Fill in, then send. Keep a copy for your records — that’s your income log for tax time.</p>
+</header>
+
+<section>
+  <div class="row">
+    <div>
+      <span class="wl">From (your name / business)</span>
+      <input class="fill" type="text" id="from">
+    </div>
+    <div>
+      <span class="wl">Invoice number</span>
+      <input class="fill" type="text" id="invno" placeholder="e.g. 2026-001">
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px;">
+    <div>
+      <span class="wl">Bill to (client name / company)</span>
+      <input class="fill" type="text" id="billto">
+    </div>
+    <div>
+      <span class="wl">Client email / phone</span>
+      <input class="fill" type="text" id="clientcontact">
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px;">
+    <div>
+      <span class="wl">Date issued</span>
+      <input class="fill" type="text" id="dateissued" placeholder="MM/DD/YYYY">
+    </div>
+    <div>
+      <span class="wl">Payment due by</span>
+      <input class="fill" type="text" id="datedue" placeholder="MM/DD/YYYY">
+    </div>
+  </div>
+</section>
+
+<h2>Services</h2>
+<section>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th style="width:30px">#</th>
+        <th>Description of work</th>
+        <th style="width:80px">Date(s)</th>
+        <th class="money">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">1</td><td></td><td></td><td class="money"></td></tr>
+      <tr><td class="num">2</td><td></td><td></td><td class="money"></td></tr>
+      <tr><td class="num">3</td><td></td><td></td><td class="money"></td></tr>
+      <tr><td class="num">4</td><td></td><td></td><td class="money"></td></tr>
+      <tr><td class="num">5</td><td></td><td></td><td class="money"></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <table class="grid" style="width:3.4in; margin-left:auto; font-size:10pt;">
+    <tr><td style="border:1px solid var(--soft-rule)"><span class="wl">Subtotal</span></td><td class="money" style="border:1px solid var(--soft-rule)"></td></tr>
+    <tr><td style="border:1px solid var(--soft-rule)"><span class="wl">Discount / adjustments</span></td><td class="money" style="border:1px solid var(--soft-rule)"></td></tr>
+    <tr><td style="border:1px solid var(--soft-rule)"><span class="wl">Sales tax (if any)</span></td><td class="money" style="border:1px solid var(--soft-rule)"></td></tr>
+    <tr><td style="border:2px solid var(--ink)"><b>Total due</b></td><td class="money" style="border:2px solid var(--ink)"></td></tr>
+  </table>
+</section>
+
+<section>
+  <span class="wl">Payment methods accepted</span>
+  <div class="writebox" style="min-height:0.75in"></div>
+</section>
+
+<section>
+  <span class="wl">Notes (late fee, thank-you, what happens next)</span>
+  <div class="writebox"></div>
+</section>
+
+<footer class="form-foot">
+  Thank you for your business. This invoice was prepared by the sender named above.
+</footer>
+
+</body>
+</html>
